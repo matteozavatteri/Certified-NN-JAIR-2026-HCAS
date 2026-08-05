@@ -1,0 +1,1 @@
+{"OriginalInputs": 43000, "TrainingTIME": [8.500435829162598], "OpportunisticSeachTIME": [0.0018208026885986328], "FormalVerificationTIME": [0.10461711883544922], "RepairTIME": [0], "SamplingTIME": [0], "LossOnValidation": [4.646673202514648], "LossOnTest": [4.521633148193359], "OpportunisticCEX": [0], "FormalVerificationCEX": [0], "NewPairs": [0], "TotalTIME": 9.690050840377808}
