@@ -3,7 +3,8 @@
 This repository contains the supplementary material of the paper:
 
 	Matteo Zavatteri, Davide Bresolin, Nicolò Navarin. 
-	Certified Neural Networks: from Verification to Synthesis. Journal of Artificial Intelligence Research, 2026.
+	Certified Neural Networks: from Verification to Synthesis.
+	Journal of Artificial Intelligence Research, 2026.
 
 # Dataset
 
