@@ -79,19 +79,19 @@ Each property is in `properties/P<k>.py`. Each file defines the precondition, th
 
 | ID | Property | Datasets |
 |---|---|---|
-| P1 | If the intruder is distant, the COC score is always above a threshold. | all |
-| P2 | If the intruder is distant, the COC score is never the minimum. | all |
-| P3 | If the intruder is directly ahead and moving towards the ownship, COC is not the maximum. | all |
-| P4 | If the intruder is directly ahead and moving away from the ownship, COC is not the maximum. | all |
-| P5 | If the intruder is near and approaching from the left, strong right is advised. | all |
-| P6 | If the intruder is far enough away, COC is advised. | all |
-| P7 | If vertical separation is large, a strong turn is never advised. | `tau = 60` |
-| P8 | With large vertical separation and previous advisory WL, the network advises COC or WL. | `pra = 1`, `tau = 60` |
-| P9 | Even if the previous advisory was WR, a nearby intruder makes the network advise SL. | `pra = 2` |
-| P10 | For a far-away intruder, COC is advised. | all |
-| 𝒫₁ = `12345610` | P1 ∧ P2 ∧ P3 ∧ P4 ∧ P5 ∧ P6 ∧ P10 | all |
-| 𝒫₂ = `123456810` | P1 ∧ … ∧ P6 ∧ P8 ∧ P10 | `pra = 1`, `tau = 60` |
-| 𝒫₃ = `123456910` | P1 ∧ … ∧ P6 ∧ P9 ∧ P10 | `pra = 2`, `tau = 60` |
+| $P_{1}$ | If the intruder is distant, the COC score is always above a threshold. | all |
+| $P_{2}$ | If the intruder is distant, the COC score is never the minimum. | all |
+| $P_{3}$ | If the intruder is directly ahead and moving towards the ownship, COC is not the maximum. | all |
+| $P_{4}$ | If the intruder is directly ahead and moving away from the ownship, COC is not the maximum. | all |
+| $P_{5}$ | If the intruder is near and approaching from the left, strong right is advised. | all |
+| $P_{6}$ | If the intruder is far enough away, COC is advised. | all |
+| $P_{7}$ | If vertical separation is large, a strong turn is never advised. | `tau = 60` |
+| $P_{8}$ | With large vertical separation and previous advisory WL, the network advises COC or WL. | `pra = 1`, `tau = 60` |
+| $P_{9}$ | Even if the previous advisory was WR, a nearby intruder makes the network advise SL. | `pra = 2` |
+| $P_{10}$ | For a far-away intruder, COC is advised. | all |
+| $\mathcal{P}_{1}$ = `12345610` | $P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5} \land P_{6} \land P_{10}$ | all |
+| $\mathcal{P}_{2}$ = `123456810` | $P_{1} \land \dots \land P_{6} \land P_{8} \land P_{10}$ | `pra = 1`, `tau = 60` |
+| $\mathcal{P}_{3}$ = `123456910` | $P_{1} \land \dots \land P_{6} \land P_{9} \land P_{10}$ | `pra = 2`, `tau = 60` |
 
 For the combined properties, verification checks each property separately. Repair solves a single MIQP containing the constraints of every property whose precondition holds at the counterexample. `properties/P123467810.py` holds one more combination; it is not among the paper's main experiments.
 
